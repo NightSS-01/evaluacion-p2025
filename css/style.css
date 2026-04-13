@@ -19,7 +19,7 @@ h2{
 }
 
 a {
-    color: #7B2D8E;
+    color: #d07ce2;
     text-decoration: none;
 }
 /* selectores de clase */
@@ -38,7 +38,7 @@ a {
 }
 
 .hero {
-    background-color: linear-gradient(135deg, #7B2D8E, #C084FC);
+    background: linear-gradient(135deg, #7B2D8E, #C084FC);
     color: white;
     padding: 4rem 2rem;
     text-align: center;
@@ -166,4 +166,127 @@ a {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
+}
+
+.seccion h2 {
+    color: #6b21a8;
+    margin-bottom: 5px;
+}
+.subtitulo {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+.pasos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.paso {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    border-bottom: 1px solid #dac4f0; /* borde morado claro */
+    border-left: 1px solid #dac4f0; /* borde morado claro */
+    border-right: 1px solid #dac4f0; /* borde morado claro */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.paso-numero {
+    background: linear-gradient(135deg, #7B2D8E, #C084FC);
+    color: white;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+/* Detalle */
+.paso-detalle h3 {
+    margin: 0;
+    color: #6b21a8;
+    font-size: 16px;
+}
+
+.paso-detalle p {
+    margin: 5px 0 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.formulario input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d8b4fe;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.formulario textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 100px;
+}
+.formulario button {
+    grid-column: span 2;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #7B2D8E, #C084FC);
+}
+
+/* Contenedor principal */
+.site-footer {
+    background-color: #3b0150;
+    color: #e9d5ff;
+    padding: 40px 20px 20px;
+}
+
+/* Contenido en columnas */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    /* 🔹 Línea debajo de las columnas */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+/* Columnas */
+.footer-col h4 {
+    color: #e593f0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-col p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* Copyright */
+.copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #c084fc;
 }

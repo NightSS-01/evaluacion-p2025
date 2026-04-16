@@ -171,123 +171,141 @@ img {
     width: 100%;
     display: block;
 }
-/* pasos para mascotas */
-.seccion h2 {
-    color: #6b21a8;
-    margin-bottom: 5px;
-}
-.subtitulo {
-    color: #6b7280;
-    margin-bottom: 25px;
-}
+/* =========================
+   PASOS PARA ADOPTAR
+========================= */
 
+/* Contenedor de la lista de pasos */
 .pasos-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: flex;              /* Activa Flexbox */
+    flex-direction: column;     /* Apila los pasos verticalmente */
+    gap: 1.2rem;                /* Espacio entre cada paso */
 }
+
+/* Cada paso individual */
 .paso {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 18px;
-    border-radius: 12px;
-    border-bottom: 1px solid #dac4f0;
-    border-left: 1px solid #dac4f0;
-    border-right: 1px solid #dac4f0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;              /* Elementos en fila */
+    gap: 1rem;                  /* Espacio entre número y texto */
+    align-items: flex-start;    /* Alinea arriba */
+    background-color: white;    /* Fondo blanco */
+    padding: 1rem;              /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(74, 14, 120, 0.1); /* Sombra suave */
 }
 
+/* Número del paso (círculo) */
 .paso-numero {
-    background: linear-gradient(135deg, #7B2D8E, #C084FC);
-    color: white;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+    flex: 0 0 50px;             /* Tamaño fijo (no crece ni se reduce) */
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #7b2d8e, #c084fc); /* Degradado violeta */
+    color: white;               /* Texto blanco */
+    border-radius: 50%;         /* Forma circular */
+    display: flex;              /* Centrado con Flexbox */
     justify-content: center;
-    margin-right: 15px;
-    flex-shrink: 0;
+    align-items: center;
+    font-size: 1.3rem;          /* Tamaño del número */
+    font-weight: bold;          /* Texto en negrita */
 }
 
+/* Título del paso */
 .paso-detalle h3 {
-    margin: 0;
-    color: #6b21a8;
-    font-size: 16px;
+    margin-bottom: 0.3rem;      /* Espacio debajo del título */
+    color: #4a0e78;             /* Color morado */
 }
 
+/* Descripción del paso */
 .paso-detalle p {
-    margin: 5px 0 0;
-    color: #4b5563;
-    font-size: 14px;
+    color: #555555;             /* Gris oscuro */
+    margin: 0;                  /* Sin margen */
 }
-/* Formularioo */
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+/* Contenedor del formulario */
 .formulario {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    display: flex;              /* Flexbox */
+    flex-wrap: wrap;            /* Permite saltos de línea */
+    gap: 1rem;                  /* Espacio entre campos */
+    max-width: 600px;           /* Ancho máximo */
+    margin: 0 auto;             /* Centrado horizontal */
 }
 
-.formulario input, textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #d8b4fe;
-    border-radius: 10px;
-    background-color: #f9fafb;
-    font-size: 14px;
-    outline: none;
-    transition: all 0.2s ease;
+/* Inputs y select */
+.formulario input,
+.formulario select {
+    flex: 1 1 200px;            /* Flexibles, mínimo 200px */
+    padding: 0.8rem;            /* Espaciado interno */
+    border: 1px solid #d8b4fe;  /* Borde violeta claro */
+    border-radius: 6px;         /* Bordes redondeados */
+    background-color: white;    /* Fondo blanco */
 }
+
+/* Área de texto */
 .formulario textarea {
-    grid-column: span 2;
-    resize: vertical;
-    min-height: 100px;
-}
-.formulario button {
-    grid-column: span 2;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    background: linear-gradient(90deg, #7B2D8E, #C084FC);
+    width: 100%;                /* Ocupa todo el ancho */
+    padding: 0.8rem;
+    border: 1px solid #d8b4fe;
+    border-radius: 6px;
+    resize: vertical;           /* Solo redimensionable verticalmente */
 }
 
-/* footer */
+/* Botón del formulario */
+.formulario .btn {
+    width: 100%;                /* Botón ancho completo */
+    background: linear-gradient(135deg, #7b2d8e, #c084fc); /* Degradado */
+    border: none;               /* Sin borde */
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+/* Contenedor principal del footer */
 .site-footer {
-    background-color: #3b0150;
-    color: #e9d5ff;
-    padding: 40px 20px 20px;
+    background-color: #2e0249;  /* Fondo oscuro */
+    color: white;               /* Texto blanco */
+    padding: 2rem;              /* Espaciado interno */
+    margin-top: 0;
 }
 
-
+/* Contenido del footer */
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 20px;
-    margin-bottom: 15px;
+    display: flex;              /* Flexbox */
+    flex-wrap: wrap;            /* Adaptable */
+    gap: 2rem;                  /* Espacio entre columnas */
+    max-width: 900px;           /* Ancho máximo */
+    margin: 0 auto;             /* Centrado */
 }
 
+/* Columnas del footer */
+.footer-col {
+    flex: 1 1 200px;            /* Responsivas */
+}
+
+/* Títulos del footer */
 .footer-col h4 {
-    color: #e593f0;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 0.8rem;
+    color: #f0abfc;             /* Color destacado */
 }
 
+/* Texto del footer */
 .footer-col p {
-    margin: 5px 0;
-    font-size: 14px;
+    color: #c4b5d0;             /* Color suave */
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;          /* Texto más pequeño */
 }
+
+/* Copyright */
 .copyright {
-    text-align: center;
-    font-size: 13px;
-    color: #c084fc;
+    text-align: center;         /* Centrado */
+    color: #8b7a9e;             /* Gris violeta */
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #4a0e78; /* Línea separadora */
+    font-size: 0.85rem;         /* Tamaño pequeño */
 }
